@@ -1,3 +1,5 @@
+'use strict';
+
 const msgs = {
     msg1: 'You have clicked on the first button YAY!',
     msg2: 'You have clicked on the second button wow!',
@@ -32,5 +34,9 @@ person.greet2();
 person.greet1();
 
 document.getElementById('btn1').addEventListener('click', msgs.displayMsg1.bind(msgs));
+//  When bind is left out it doesn't recognize displayMsg as initialized
+//  We use bind to create a bound function that is exactly like the function inside the object.
+//  With everything in the object initialized.
 document.getElementById('btn2').addEventListener('click', msgs.displayMsg2.bind(msgs));
+
 document.getElementById('btn3').addEventListener('click', msgs.displayMsg3.bind(msgs));
